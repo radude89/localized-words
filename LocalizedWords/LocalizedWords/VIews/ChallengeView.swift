@@ -13,14 +13,6 @@ struct ChallengeView: View {
     @State private var enteredWord = ""
 
     private let acceptedLocalizedKeys = ["walrus", "cone", "banana"]
-
-    private lazy var localizedKeyValuesWords = Dictionary(
-        uniqueKeysWithValues: acceptedLocalizedKeys.map { key in
-            let translatedCopy = String.LocalizationValue(key)
-            return (key, String(localized: translatedCopy))
-        }
-    )
-
     private static let suffixForSpecialHint = "_value"
 
     var body: some View {
